@@ -1,0 +1,84 @@
+body {
+  width: 100%;
+}
+
+.carousel-inner img {
+  width: 100%;
+}
+
+.siteheader {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.2s;
+  width: 97%;
+  border-radius: 10px;
+  margin: 10px;
+  color: white;
+  background: black;
+  text-align: center;
+  padding: 20px;
+}
+
+.siteheader img {
+  height: 100px;
+}
+
+.card {
+  box-shadow: 0 10px 15px 0 rgba(0,0,0,0.2);
+  transition: 0.2s;
+  width: 30%;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: white;
+}
+
+.card:hover {
+  box-shadow: 0 20px 40px 0 rgba(0,0,0,0.4);
+}
+
+.post-head {
+  font-size: x-large;
+  text-align: center;
+  white-space: pre-line;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+}
+
+.thumbnail-img {
+  width: 90%;
+  margin: 5%;
+  display: block;
+}
+
+div.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu div {
+  display: inline-block;
+}
+
+.img-tag {
+  display: inline;
+  margin-left: 5%;
+  width: 7%;
+}
+
+.img-red {
+  display: inline;
+  margin-left: 5%;
+  width: 9%;
+}
+
+.subsectionContainer {
+  background-color: black;
+}
+
+.logo {
+  width: 30%;
+}
+
+.hid {
+  visibility: hidden;
+}
