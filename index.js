@@ -45,6 +45,15 @@ app.get('/sales', async (req, res) => {
   });
 });
 
+app.get('/tryon', async(req, res) => {
+  const json_content = "";
+  const scriptFile = "tryon.js";
+  res.render('tryonIndex', {
+    json_content,
+    scriptFile,
+  });
+});
+
 app.listen(process.env.PORT || 3000, () => {
   console.log("server started on port 3000");
 });
