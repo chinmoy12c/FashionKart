@@ -2,7 +2,7 @@
 window.onload = (e) => {
   var ifrm = document.createElement("iframe");
   ifrm.width = "100%";
-  ifrm.height = window.innerHeight;
+  ifrm.height = window.innerHeight - window.innerHeight * 0.095;
   ifrm.frameBorder = "border:1px solid black;";
   ifrm.setAttribute("src", "https://fashionkart.github.io/");
 
