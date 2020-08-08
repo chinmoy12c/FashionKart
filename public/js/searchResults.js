@@ -22,7 +22,7 @@ const getSite = (parsedData, searchField) => {
     for (let x=0; x < parsedData.length; x++) {
         contentHolder += `
         <div class="card">
-            <img class="thumbnail-img" src="http://192.168.0.104/fashionKart/` + searchField + "/" + parsedData[x] + `">
+            <img class="thumbnail-img" src="http://c56c60ea9433.ngrok.io/` + searchField + "/" + parsedData[x] + `">
         </div>
         `;
     }

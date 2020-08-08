@@ -57,7 +57,7 @@ app.get('/tryon', async(req, res) => {
 
 app.get('/search', async(req, res) => {
   const searchText = req.query.search;
-  const response = await fetch('http://192.168.0.104/fashionKart/');
+  const response = await fetch('http://c56c60ea9433.ngrok.io/?search=' + searchText);
   let json_content = await response.text();
   const scriptFile = "searchResults.js";
 

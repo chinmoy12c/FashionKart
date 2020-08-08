@@ -9,7 +9,7 @@ setTimeout(() => {
     let searchSuggest = document.getElementById("searchSuggest");
     let searchSuggestContainer = document.createElement("div");
 
-    let searchKeys = ["Tshirts", "Pants", "Jeans", "Blazzers"];
+    let searchKeys = ["Tshirts", "Jeans", "Blazzers"];
 
     searchBar.addEventListener("keyup", (event) => {
         searchSuggest.innerHTML = "";
@@ -22,7 +22,7 @@ setTimeout(() => {
 
         for (let keyword in searchKeys) {
             if (searchKeys[keyword].toLowerCase().indexOf(textValue.toLowerCase()) >= 0) {
-                searchSuggestContainer.innerHTML += `<div class="searchItem">` + searchKeys[keyword] + `</div>`;
+                searchSuggestContainer.innerHTML += `<div class="searchItem" onclick=setSearch(this)>` + searchKeys[keyword] + `</div>`;
             }
         }
 
@@ -32,3 +32,8 @@ setTimeout(() => {
         searchSuggest.appendChild(searchSuggestContainer);
     });
 }, 1000);
+
+setSearch = (item) => {
+    document.getElementById("searchInput").value = item.innerHTML;
+    searchCategory();
+};
