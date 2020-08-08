@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="/js/header.js"></script>
 </head>
 
 <body>
@@ -22,13 +23,28 @@
     
             <!-- Menu Items -->
             <div class="collapse navbar-collapse" id="mainNavBar">
-                <ul class="nav navbar-nav">
+                <ul class="col-md-12 nav navbar-nav">
                     <li><a href="/">Home</a></li>
                     <li><a href="/celebs">Celeb Section</a></li>
                     <li><a href="/sales">Sales Recommendation</a></li>
                     <li><a href="/tryon">Try On</a></li>
                 </ul>
             </div>
+
+            <form class="d-flex justify-content-center searchbar">
+              <div style="position: relative;">
+                <input id="searchInput" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+                aria-label="Search">
+                <button type="button" class="btn btn-primary" onclick="searchCategory()">Search</button>
+                <div class="searchSuggest">
+                  <div class="searchItem">Suggest</div>
+                  <div class="searchItem">Suggest</div>
+                  <div class="searchItem">Suggest</div>
+                  <div class="searchItem">Suggest</div>
+                  <div class="searchItem">Suggest</div>
+                </div>
+              </div>
+            </form>
     
           </div>
     </nav>

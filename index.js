@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const fetch = require("node-fetch");
+const { json } = require("express");
 const app = express();
 
 
@@ -51,6 +52,19 @@ app.get('/tryon', async(req, res) => {
   res.render('tryonIndex', {
     json_content,
     scriptFile,
+  });
+});
+
+app.get('/search', async(req, res) => {
+  const searchText = req.query.search;
+  const response = await fetch('http://192.168.0.104/fashionKart/');
+  let json_content = await response.text();
+  const scriptFile = "searchResults.js";
+
+  res.render('search', {
+    json_content,
+    scriptFile,
+    searchText
   });
 });
 

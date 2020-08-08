@@ -59,6 +59,10 @@ div.scrollmenu div {
   display: inline-block;
 }
 
+.gridView div{
+  display: inline-block;
+}
+
 .img-tag {
   display: inline;
   margin-left: 5%;
@@ -81,4 +85,33 @@ div.scrollmenu div {
 
 .hid {
   visibility: hidden;
+}
+
+.searchbar {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#searchInput {
+  width: 90%;
+  display: inline;
+}
+
+.searchSuggest {
+  background: white;
+  padding: 10px;
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  right: 10%;
+}
+
+.searchItem {
+  font-size: large;
+  padding: 10px;
+}
+
+.searchItem:hover {
+  background-color: aliceblue;
 }
