@@ -116,3 +116,25 @@ div.scrollmenu div {
 .searchItem:hover {
   background-color: aliceblue;
 }
+
+.statsHolder {
+  display: block;
+}
+
+.cardGrid {
+  box-shadow: 0 10px 15px 0 rgba(0,0,0,0.2);
+  transition: 0.2s;
+  border-radius: 10px;
+  margin: 30px;
+  background-color: white;
+}
+
+.thumbnail-img-grid {
+  width: 90%;
+  margin-left: 5%;
+  height: 35vw;
+}
+
+.statsGraph {
+  height: 35vw;
+}
