@@ -11,7 +11,8 @@ window.onload = (e) => {
 
     document.getElementById("contentHolder").appendChild(container);
 
-    setTimeout(setCharts(), 5000);
+    setTimeout(setCharts, 1000);
+    // setCharts();
 };
 
 function dynamicallyLoadScript(url) {
