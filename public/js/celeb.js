@@ -29,9 +29,6 @@ const getSite = (parsedData, site) => {
             <img class="thumbnail-img" src="`+ currentSite.sections[section].sectionImageLink +`">
             <img class="img-tag" id="star`+ section +`" onclick="flipIcon('`+ section +`')" src="icons/favourite.png">
             <a href="`+ currentSite.sections[section].sectionRedirect +`" target="_blank" ><img class="img-red" src="icons/redirect.png"></a>
-            <p class="post-head">
-            `+ section + `
-            </p>
         </div>
         `;
     }
