@@ -27,7 +27,7 @@ const getSales = (parsedData) => {
     let contentHolder = "";
 
     contentHolder += '<div id="sectionHolder">';
-    contentHolder += '<h2 class="siteheader"><img src="/icons/leaves.jpg">Sales Recommendation<img src="/icons/leaves1.jpg"></h2>';
+    contentHolder += '<h2 class="siteheader"><img src="/icons/leaves.jpg">TrendStats (Under Construction)<img src="/icons/leaves1.jpg"></h2>';
     contentHolder += '<div class="statsHolder">';
 
     let ind = 0;
@@ -37,7 +37,13 @@ const getSales = (parsedData) => {
             <div class="cardGrid col-md-5 col-sm-5">
                 <img class="thumbnail-img-grid" src="`+ section +`">
             </div>
-            <div id="chartContainer` + ind + `" class="statsGraph col-md-5 col-sm-5"></div>
+            <div class="col-md-5 col-sm-5">
+                <div class=row>
+                    <div id="chartContainer` + ind + `" class="statsGraph col-md-12 col-sm-12"></div>
+                    <div id="starRatingHolder` + ind + `" class="col-sm-12 col-md-12">
+                    </div>
+                </div>
+            </div>
         </div>
         `;
         ind++;
@@ -55,7 +61,13 @@ const setCharts = () => {
             animationEnabled: true,
             theme: "light2",
             title:{
-                text: "Insight Stats"
+                text: "Review Stats"
+            },
+            axisX:{
+                title: "Number of days",
+            },
+            axisY:{
+                title: "User Interaction",
             },
             data: [{        
                 type: "line",
@@ -65,7 +77,20 @@ const setCharts = () => {
         });
         chart.render();
         ind++;
-    }    
+    }
+
+    ind = 0;
+    while (document.getElementById("starRatingHolder" + ind)) {
+        let starHolder = document.getElementById("starRatingHolder" + ind);
+        for (let x = 1; x <= Math.round(Math.random() * 2 + 3); x++) {
+            let star = document.createElement("img");
+            star.src = "/icons/star.png";
+            star.className = "statStar";
+            starHolder.appendChild(star);
+        }
+
+        ind++;
+    }
 };
 
 getStats = () => {
