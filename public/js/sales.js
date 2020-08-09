@@ -11,7 +11,7 @@ window.onload = (e) => {
 
     document.getElementById("contentHolder").appendChild(container);
 
-    setTimeout(setCharts, 1000);
+    setTimeout(setCharts, 700);
     // setCharts();
 };
 
